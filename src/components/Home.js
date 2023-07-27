@@ -1,7 +1,8 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 
 function Home({ isLoggedIn }) {
+  const history = useHistory();
   if (!isLoggedIn) return <Redirect to="/login" />;
 
   return (
